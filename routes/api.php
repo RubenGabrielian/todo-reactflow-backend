@@ -28,3 +28,5 @@ Route::get('todos',[\App\Http\Controllers\Api\TodosController::class,'todos']);
 Route::put('update-todo',[\App\Http\Controllers\Api\TodosController::class,'update']);
 Route::post("add-edge",[\App\Http\Controllers\EdgesController::class,'addEdge']);
 Route::get("edges",[\App\Http\Controllers\EdgesController::class,'edges']);
+Route::post('delete-todo',[\App\Http\Controllers\Api\TodosController::class,'deleteTodo']);
+Route::put('update-todo-content',[\App\Http\Controllers\Api\TodosController::class,'updateTodoContent']);

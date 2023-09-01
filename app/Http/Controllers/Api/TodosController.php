@@ -32,4 +32,18 @@ class TodosController extends Controller
         $todo->save();
         return response()->json(['success'=> true]);
     }
+
+    public function deleteTodo (Request $request) {
+        $todo = Todos::where('id', $request->id)->first();
+        $todo->delete();
+        return response()->json(['success'=> true]);
+    }
+
+    public function updateTodoContent (Request $request) {
+        $todo = Todos::where('id', $request->id)->first();
+        $todo->title = $request->title;
+        $todo->description = $request->description;
+        $todo->save();
+        return response()->json(['success'=> true]);
+    }
 }
