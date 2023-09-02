@@ -30,3 +30,4 @@ Route::post("add-edge",[\App\Http\Controllers\EdgesController::class,'addEdge'])
 Route::get("edges",[\App\Http\Controllers\EdgesController::class,'edges']);
 Route::post('delete-todo',[\App\Http\Controllers\Api\TodosController::class,'deleteTodo']);
 Route::put('update-todo-content',[\App\Http\Controllers\Api\TodosController::class,'updateTodoContent']);
+Route::post('complete',[\App\Http\Controllers\Api\TodosController::class,'complete']);
